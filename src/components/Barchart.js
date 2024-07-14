@@ -1,20 +1,56 @@
 // ./components/BarChart.js
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
+import { Parametercontext } from "../App";
 
 export default function BarChart() {
-  const labels = ["January", "February", "March", "April", "May", "June"];
-  const data = {
+  const labels = [
+    "Sunlight",
+    "Wind Current",
+    "Rain Fall",
+    "Humidity",
+    "Ph Value",
+    "Temperature",
+  ];
+  const info = {
     labels: labels,
     datasets: [
       {
-        label: "My First dataset",
+        label: "Parameters Bar Chart",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 20, 30, 45, 100, 500],
+        data: [0, 0, 0, 0, 0, 0],
       },
     ],
   };
+  const [data, setData] = useState(info);
+  const [
+    sunlight,
+    setSunlight,
+    wind,
+    setWind,
+    rainfall,
+    setRainfall,
+    humidity,
+    setHumidity,
+    Ph,
+    setPh,
+    temperature,
+    setTemperature,
+  ] = useContext(Parametercontext);
+  useEffect(() => {
+    setData({
+      labels: labels,
+      datasets: [
+        {
+          label: "My First dataset",
+          backgroundColor: "rgb(255, 99, 132)",
+          borderColor: "rgb(255, 99, 132)",
+          data: [sunlight, wind, rainfall, humidity, Ph, temperature],
+        },
+      ],
+    });
+  }, [sunlight, wind, rainfall, humidity, Ph, temperature]);
 
   const options = {
     maintainAspectRatio: false,
