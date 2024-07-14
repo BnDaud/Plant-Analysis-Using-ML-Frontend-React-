@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import ListParameter from "../components/ListParameter";
 import BarChart from "../components/Barchart";
 import PieChart from "../components/piechart";
 import Predicted from "../components/predicted";
 
 export default function DisplayAnalysis() {
+  const [sunlight, setSunlight] = useState("22");
+
   return (
     <>
       <div className="bg-[#f0f0f0]">

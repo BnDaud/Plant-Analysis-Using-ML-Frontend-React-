@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Continuousparameter from "./continuousparameter";
 import Discreteparameter from "./discreteparameter";
 
-export default function ListParameter() {
+export default function ListParameter(arg) {
   const [changeparameter, setChangeparameter] = useState(true);
   return (
     <>
@@ -21,11 +21,11 @@ export default function ListParameter() {
           </button>
         </div>
         <div className="text-center">
-          <button className="bg-green-200 hover:bg-my_green2  p-1 rounded-lg mt-3 hover:text-[#f0f0f0]">
+          <button className="bg-green-200 hover:bg-my_green2  p-1 rounded-lg my-3 hover:text-[#f0f0f0]">
             {" "}
             Submit
           </button>
-        </div>
+        </div>{" "}
       </div>
     </>
   );

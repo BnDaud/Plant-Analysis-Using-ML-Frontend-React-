@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { IoSunny, IoRainy } from "react-icons/io5";
 import { LuWind } from "react-icons/lu";
 import { GiChemicalDrop } from "react-icons/gi";
 import { WiHumidity } from "react-icons/wi";
 import { IoThermometerOutline } from "react-icons/io5";
+import { Parametercontext } from "../App";
+export default function Continuousparameter(arg) {
+  const [
+    sunlight,
+    setSunlight,
+    wind,
+    setWind,
+    rainfall,
+    setRainfall,
+    humidity,
+    setHumidity,
+    Ph,
+    setPh,
+    temperature,
+    setTemperature,
+  ] = useContext(Parametercontext);
 
-export default function Continuousparameter() {
   return (
     <>
       <div>
@@ -20,6 +35,10 @@ export default function Continuousparameter() {
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
             placeholder="Sunlight"
+            value={sunlight}
+            onChange={(e) => {
+              setSunlight(e.target.value);
+            }}
           />
         </div>{" "}
         <div className="flex items-center gap-2 mb-3 border border-my_green1 rounded-lg">
@@ -27,6 +46,8 @@ export default function Continuousparameter() {
           <input
             className="rounded-lg pl-3 py-1  focus:outline-none bg-[#f0f0f0]"
             placeholder="Wind Current"
+            value={wind}
+            onChange={(e) => setWind(e.target.value)}
           />
         </div>
         <div className="flex items-center gap-2 mb-3 border border-my_green1 rounded-lg">
@@ -34,6 +55,8 @@ export default function Continuousparameter() {
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
             placeholder="Rain Fall"
+            value={rainfall}
+            onChange={(e) => setRainfall(e.target.value)}
           />
         </div>
         <div className="flex items-center gap-2 mb-3 border border-my_green1 rounded-lg">
@@ -41,6 +64,8 @@ export default function Continuousparameter() {
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
             placeholder="Humidity"
+            value={humidity}
+            onChange={(e) => setHumidity(e.target.value)}
           />
         </div>
         <div className="flex items-center gap-2 mb-3 rounded-lg border border-my_green1">
@@ -48,6 +73,8 @@ export default function Continuousparameter() {
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
             placeholder="Ph Value"
+            value={Ph}
+            onChange={(e) => setPh(e.target.value)}
           />
         </div>
         <div className="flex items-center gap-2 mb-3 rounded-lg border border-my_green1">
@@ -55,6 +82,8 @@ export default function Continuousparameter() {
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0] "
             placeholder="Temperature "
+            value={temperature}
+            onChange={(e) => setTemperature(e.target.value)}
           />
         </div>
       </div>
