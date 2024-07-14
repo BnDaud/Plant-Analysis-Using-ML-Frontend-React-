@@ -32,6 +32,7 @@ export default function DisplayAnalysis() {
           </div>
         </div>
       </div>
+      <footer className="p-10 bg-my_green1 mt-16 "></footer>
     </>
   );
 }
