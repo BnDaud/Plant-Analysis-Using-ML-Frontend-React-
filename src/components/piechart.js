@@ -7,7 +7,7 @@ const labels = [
   "Sunlight",
   "Wind Current",
   "Rain Fall",
-  "Humidity",
+  "CO2",
   "Ph Value",
   "Temperature",
 ];
@@ -45,6 +45,8 @@ export default function PieChart() {
     setPh,
     temperature,
     setTemperature,
+    region,
+    setRegion,
   ] = useContext(Parametercontext);
   useEffect(() => {
     setData({

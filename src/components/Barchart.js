@@ -8,7 +8,7 @@ export default function BarChart() {
     "Sunlight",
     "Wind Current",
     "Rain Fall",
-    "Humidity",
+    "CO2",
     "Ph Value",
     "Temperature",
   ];
@@ -37,6 +37,8 @@ export default function BarChart() {
     setPh,
     temperature,
     setTemperature,
+    region,
+    setRegion,
   ] = useContext(Parametercontext);
   useEffect(() => {
     setData({

@@ -34,7 +34,7 @@ export default function Continuousparameter(arg) {
           <IoSunny className="text-xl  ml-1 text-[#FFBF00]" />
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
-            placeholder="Sunlight"
+            placeholder="Sunlight (5-11)hr/day"
             value={sunlight}
             onChange={(e) => {
               setSunlight(e.target.value);
@@ -45,7 +45,7 @@ export default function Continuousparameter(arg) {
           <LuWind className="text-xl  ml-1 text-[#0f5e9c] " />
           <input
             className="rounded-lg pl-3 py-1  focus:outline-none bg-[#f0f0f0]"
-            placeholder="Wind Current"
+            placeholder="Wind Current (1-6)m/s"
             value={wind}
             onChange={(e) => setWind(e.target.value)}
           />
@@ -54,7 +54,7 @@ export default function Continuousparameter(arg) {
           <IoRainy className="text-xl ml-1 text-[#0f5e9c]" />
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
-            placeholder="Rain Fall"
+            placeholder="Rain Fall (40-400) mm/month"
             value={rainfall}
             onChange={(e) => setRainfall(e.target.value)}
           />
@@ -63,7 +63,7 @@ export default function Continuousparameter(arg) {
           <WiHumidity className="text-xl ml-1 text-[#0f5e9c]" />
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
-            placeholder="Humidity"
+            placeholder="CarbonDioxide(350-400)ppm"
             value={humidity}
             onChange={(e) => setHumidity(e.target.value)}
           />
@@ -72,7 +72,7 @@ export default function Continuousparameter(arg) {
           <GiChemicalDrop className="text-xl ml-1 text-red-400" />
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0]"
-            placeholder="Ph Value"
+            placeholder="Ph Value (4.5-8.5)"
             value={Ph}
             onChange={(e) => setPh(e.target.value)}
           />
@@ -81,7 +81,7 @@ export default function Continuousparameter(arg) {
           <IoThermometerOutline className="text-xl ml-1 text-red-600" />
           <input
             className="rounded-lg pl-3 py-1 focus:outline-none bg-[#f0f0f0] "
-            placeholder="Temperature "
+            placeholder="Temperature (10-35)C"
             value={temperature}
             onChange={(e) => setTemperature(e.target.value)}
           />

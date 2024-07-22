@@ -11,8 +11,10 @@ function App() {
   const [temperature, setTemperature] = useState("");
   const [topography, setTopography] = useState("");
   const [soiltype, setSoiltype] = useState("");
-  const [texture, setTexture] = useState("");
+
   const [minerals, setMinerals] = useState("");
+  const [region, setRegion] = useState("");
+  const [fetchPRed, setPred] = useState(false);
 
   return (
     <Parametercontext.Provider
@@ -33,10 +35,13 @@ function App() {
         setTopography,
         soiltype,
         setSoiltype,
-        texture,
-        setTexture,
+
         minerals,
         setMinerals,
+        region,
+        setRegion,
+        fetchPRed,
+        setPred,
       ]}
     >
       <div className="App bg-[#f0f0f0] h-screen">
