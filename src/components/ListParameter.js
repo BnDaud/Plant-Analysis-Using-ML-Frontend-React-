@@ -72,7 +72,7 @@ export default function ListParameter(arg) {
         </form>
         <div className="text-center ">
           <button
-            className="bg-green-200 hover:bg-my_green2  p-1 rounded-lg hover:text-[#f0f0f0]"
+            className="bg-green-500 hover:bg-my_green2  p-1 rounded-lg hover:text-[#f0f0f0]"
             onClick={() => {
               setChangeparameter(!changeparameter);
             }}
